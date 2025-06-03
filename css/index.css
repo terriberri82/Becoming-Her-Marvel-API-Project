@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display';
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10em;
+    overflow-x: hidden;
+  max-width: 100vw;
+  }
+  
+
+ body{
+    background-image: url("https://res.cloudinary.com/doiwe9d5a/image/upload/v1748473631/Resize_overlsy_purple_1200_by_600_kzcu6r.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding:0; 
+    background-size: cover;
+    overflow-x: hidden; 
+    background-attachment: fixed;
+    color: #fff; 
+}
+
+/*==== DEFAULT STYLING======*/
+.display-flex{
+  display: flex;
+}
+.display-direction-column{
+  flex-direction: column;
+}
+.no-display{
+  display: none;
+}
+.block-display{
+  display: block;
+}
+/* ====NAV SECTION===*/
+.nav-items{
+  list-style-type: none;
+  
+  gap: 1rem;
+  
+}
+.nav-items li a{
+  text-decoration: none;
+  color: white;
+}
+.nav-bar{
+  background: linear-gradient(135deg, #410455 0%, #c225a8 100%);
+  color: #FFFFFF;
+   font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 40px; 
+  display: flex;
+   position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+
+}
+
+/*=====INDEX.HTML PAGE ACESS PAGE SECTION======*/
+
+.intro-video-section {
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen */
+  position: relative;
+  overflow: hidden;
+  flex-direction: column; /* stacks content vertically */
+  
+}
+#intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+.access-page{
+
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+ 
+ flex-direction: column;
+ align-items: center;
+gap: 10px;
+ padding: 3em; 
+margin: 0em;
+background: linear-gradient(135deg, #410455da 0%, #860b71dc 100%);
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+display: none;
+  
+}
+
+.access-page h1{
+  font-size: 3.5em;
+  color: #dde2ed;
+  text-shadow: 2px 2px 5px rgb(19, 7, 19);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.access-page h2{
+  font-size: 1.2em;
+  font-style: italic;
+  color: #f7d6fa;
+  text-shadow: 2px 2px 5px rgb(19, 7, 19);
+}
+
+.access-page form{
+  justify-content: center;
+ 
+}
+.contact-name{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  display: flex;
+}
+.contact-name input{
+  padding: 10px 25px;
+  font-size: 1em;
+}
+.enter-button{
+  
+  justify-content: center;
+  margin: 1em;
+  
+}
+.enter-button input{
+ padding: 10px 50px;
+  background: linear-gradient(180deg, #18081fb6 0%, #f0cde9b6 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; 
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+audio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+/*========HEROINES PAGE =====*/
+.marvel-women{
+ 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 10rem;
+  
+}
+.women-button{
+   padding: 10px 50px;
+  background: linear-gradient(135deg, #3b0a4bb6 0%, #5d1451b6 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; 
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.button-hover:hover{
+  background-color: rgba(223, 10, 194, 0.74);
+}
+.heroine-grid{
+flex-wrap: wrap;
+
+}
+
+.hero-card{
+ 
+   background: linear-gradient(135deg, #3b0a4bb6 0%, #5d1451b6 100%);
+  padding: 1em 2.5em;      
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 20px auto;            
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+}
+
+
+
+
+/*====== QUIZ.HTML PAGE STYLING======*/
+
+.quiz-intro{
+
+
+
+ flex-direction: column;
+ align-items: center;
+gap: 10px;
+ padding: 3em; 
+margin: 2em 0em;
+  
+}
+.quiz-intro h1{
+
+}
+
+.quiz-intro p{
+
+}
+.quiz-page{
+
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+  padding: 0em 1em 2em 1em;
+  background-color: #130119dc;
+
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+ 
+margin: 4em 6em;
+}

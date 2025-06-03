@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Which Marvel Woman Are You Open API Project</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/index.css" rel="stylesheet" />
+            
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+           <nav  class="nav-bar">
+                <ul class="nav-items display-flex">
+                    <li>
+                      <a class="" href="index.html">Home</a></li>
+                    <li>
+                        <a class="" href="quiz.html">Take The Quiz</a></li>
+                    </li>
+                    <li>
+                        <a class="" href="heroines.html">Meet The Heroines</a></li>
+                    </li>
+                </ul>
+           </nav>
+        </header>
+        <main>
+            <section class="quiz-page display-flex">
+           
+                <section class="quiz-intro display-flex">
+                    <h1 id="greeting"></h1>
+                    <p>Power. Purpose. Personality. Which Marvel heroine embodies your inner fire?
+                         Take the quiz and uncover your superhero self, because saving the world starts with 
+                         knowing who you are.</p>
+                </section>
+                <section class="quiz-form-container">
+                    <form id="quizForm">
+                        <section class="question display-flex display-direction-column">
+                            <h2>1. What type of inner strength drives your leadership?</h2>
+                            <label><input type="radio" name="q1" value="Black Widow" /> Calm under pressure with unwavering focus</label>
+                            <label><input type="radio" name="q1" value="Scarlet Witch" /> Intuition mixed with fierce protection  </label>
+                            <label><input type="radio" name="q1" value="Wasp" /> Optimism blended with adaptability </label>
+                            <label><input type="radio" name="q1" value="Kate Bishop" /> Precision, wit, and fearless determination</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>2. How do you navigate complex emotions?</h2>
+                            <label><input type="radio" name="q2" value="Jean Grey" /> I explore the mind to find meaning </label>
+                            <label><input type="radio" name="q2" value="Nebula" /> I harden myself to survive  </label>
+                            <label><input type="radio" name="q2" value="Rogue" /> I channel my feelings into justice </label>
+                            <label><input type="radio" name="q2" value="Mystique" /> I shift identities and evolve with purpose</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>3. What best describes your relationship with power?</h2>
+                            <label><input type="radio" name="q3" value="Gamora" /> It’s earned through survival and strength</label>
+                            <label><input type="radio" name="q3" value="Wasp" /> It’s directed with precision and lightness </label>
+                            <label><input type="radio" name="q3" value="Mystique" /> It’s flexible, ever-changing, and mysterious</label>
+                            <label><input type="radio" name="q3" value="Kate Bishop" /> It’s earned with humility, heart, and a little sarcasm </label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>4. In times of crisis, who are you?</h2>
+                            <label><input type="radio" name="q4" value="Gamora" /> The steady force who never backs down</label>
+                            <label><input type="radio" name="q4" value="Storm" /> The storm that brings renewal and clarity </label>
+                            <label><input type="radio" name="q4" value="Wasp" /> The inventive spark who keeps others going</label>
+                            <label><input type="radio" name="q4" value="Mystique" /> The strategist who adapts in silence</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>5. What’s your journey of transformation?</h2>
+                            <label><input type="radio" name="q5" value="Jean Grey" /> A telepath searching for peace within</label>
+                            <label><input type="radio" name="q5" value="Scarlet Witch" /> A soul forged by chaos into purpose  </label>
+                            <label><input type="radio" name="q5" value="Rogue" /> A misunderstood force turned protector</label>
+                            <label><input type="radio" name="q5" value="Wasp" /> A sharp strategist mastering power through precision and legacy</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>6. When you're underestimated, how do you respond?</h2>
+                            <label><input type="radio" name="q6" value=" Black Widow" /> Let my results speak louder than doubt</label>
+                            <label><input type="radio" name="q6" value="Storm" /> Face it with quiet power and elemental grace  </label>
+                            <label><input type="radio" name="q6" value="Nebula" /> Channel the pain into a second chance</label>
+                            <label><input type="radio" name="q6" value="Mystique" /> Use it to shape my path and identity</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>7. How do you connect with others?</h2>
+                            <label><input type="radio" name="q7" value="Gamora" /> Through quiet loyalty and action</label>
+                            <label><input type="radio" name="q7" value="Jean Grey" /> With empathy and psychic depth </label>
+                            <label><input type="radio" name="q7" value="Rogue" /> With directness and protective instinct </label>
+                            <label><input type="radio" name="q7" value="Black Widow" /> Through calculated presence and poise</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>8. What keeps you grounded in purpose?</h2>
+                            <label><input type="radio" name="q8" value="Kate Bishop" /> A sense of responsibility to do what's right, even when no one’s watching</label>
+                            <label><input type="radio" name="q8" value="Storm" /> My unbreakable will  </label>
+                            <label><input type="radio" name="q8" value="Mystique" /> My ability to adapt to change</label>
+                            <label><input type="radio" name="q8" value="Scarlet Witch" /> My journey to heal and empower</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>9. What scares you the most?</h2>
+                            <label><input type="radio" name="q9" value="Scarlet Witch" /> Losing control of what’s within </label>
+                            <label><input type="radio" name="q9" value="Rogue" /> Being seen as just a weapon  </label>
+                            <label><input type="radio" name="q9" value="Nebula" /> Becoming a reflection of your past</label>
+                            <label><input type="radio" name="q9" value="Kate Bishop" /> Letting people down when it matters most</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>10. What kind of legacy do you want to leave?</h2>
+                            <label><input type="radio" name="q10" value="Jean Grey" /> A legacy of wisdom and emotional strength</label>
+                            <label><input type="radio" name="q10" value="Black Widow" /> A path of quiet resilience and justice</label>
+                            <label><input type="radio" name="q10" value="Gamora" /> Proof that second chances lead to greatness</label>
+                            <label><input type="radio" name="q10" value="Storm" /> The truth that power can evolve with grace</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>11. What’s your role in a team setting?</h2>
+                            <label><input type="radio" name="q11" value="Black Widow" /> The field expert with silent precision</label>
+                            <label><input type="radio" name="q11" value="Rogue" /> The moral compass with a charged will</label>
+                            <label><input type="radio" name="q11" value="Jean Grey" /> The quiet strategist with universal perspective</label>
+                            <label><input type="radio" name="q11" value="Mystique" /> The shape-shifter who adapts to any role</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>12. What drives your courage?</h2>
+                            <label><input type="radio" name="q12" value="Gamora" /> Redemption through every battle fought</label>
+                            <label><input type="radio" name="q12" value="Storm" /> Rising every time you fall</label>
+                            <label><input type="radio" name="q12" value="Wasp" /> Knowing your truth, even when it changes</label>
+                            <label><input type="radio" name="q12" value="Scarlet Witch" /> Using pain to protect others</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>13. When you love, how do you show it?</h2>
+                            <label><input type="radio" name="q13" value="Nebula" /> Fierce loyalty behind guarded walls</label>
+                            <label><input type="radio" name="q13" value="Kate Bishop" /> Through loyalty, humor, and always showing up </label>
+                            <label><input type="radio" name="q13" value="Rogue" /> Sacrifice and shielding others from harm</label>
+                            <label><input type="radio" name="q13" value="Jean Grey" /> Deep emotion expressed through power</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>14. What’s your personal superpower?</h2>
+                            <label><input type="radio" name="q14" value="Wasp" /> Quiet brilliance and adaptability</label>
+                            <label><input type="radio" name="q14" value="Scarlet Witch" /> Emotional depth turned into strength</label>
+                            <label><input type="radio" name="q14" value="Nebula" /> Honesty, even when it hurts</label>
+                            <label><input type="radio" name="q14" value="Black Widow" /> Leading without demanding the spotlight</label>
+                        </section>
+                        <section class="question display-flex display-direction-column">
+                            <h2>15. Which path reflects your soul’s evolution?</h2>
+                            <label><input type="radio" name="q15" value="Kate Bishop" /> The journey of proving yourself through courage, heart, and persistence </label>
+                            <label><input type="radio" name="q15" value="Nebula" /> The struggle to reclaim identity and find inner peace</label>
+                            <label><input type="radio" name="q15" value="Storm" /> The transformation of grief into purpose</label>
+                            <label><input type="radio" name="q15" value="Gamora" /> The fierce will to become more than your past</label>
+                        </section>
+                        <button type="submit">See My Heroine Match</button>
+                    </form>
+                </section>
+            </section>
+            <section id="result-summary" class="display-flex column no-display">
+              <h2>Your Heroine Match is <span id="result-name"></span></h2>
+              <button id="view-heroine-btn">Meet Your Heroine</button>
+            </section>
+            <section id = "bonus-question" class="bonus-form-container quiz-page display-flex no-display">
+                <form id="bonusForm">
+                    <section class="question display-flex display-direction-column ">
+                        <h2>Bonus: Which description feels most like your inner heroine?</h2>
+                        <label><input type="radio" name="bonus" value="Black Widow" /> Calm tactician who leads with silent precision </label>
+                        <label><input type="radio" name="bonus" value="Gamora" /> Fierce warrior finding purpose through redemption </label>
+                        <label><input type="radio" name="bonus" value="Jean Grey" /> Empathic guide balancing depth and power </label>
+                        <label><input type="radio" name="bonus" value="Nebula" /> Survivor shaping strength from pain </label>
+                        <label><input type="radio" name="bonus" value="Storm" /> Elemental force bringing renewal and grace </label>
+                        <label><input type="radio" name="bonus" value="Scarlet Witch" /> Mystic soul channeling chaos into creation </label>
+                        <label><input type="radio" name="bonus" value="Rogue" /> Protector driven by instinct and empathy </label>
+                        <label><input type="radio" name="bonus" value="Wasp" /> Inventive mind navigating change with courage </label>
+                        <label><input type="radio" name="bonus" value="Mystique" /> Shapeshifter seeking identity and transformation </label>
+                        <label><input type="radio" name="bonus" value="Kate Bishop" /> A fierce heart guided by wit, strength, and loyalty.</label>
+                    </section>
+                    <button type="submit">See My Heroine Match</button>
+                </form>
+            </section>  
+        </main>
+        <script src="js/quiz.js"></script>
+    </body>

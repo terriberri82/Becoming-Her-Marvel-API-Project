@@ -22,9 +22,14 @@ app.use(express.static(__dirname));
 // API route to fetch Marvel characters
 app.get('/api/characters', async (req, res) => {
   try {
+    const name = req.query.name;
+    console.log('Requested name:', name);
     const ts = new Date().getTime();
     const hash = md5(ts + privateKey + publicKey);
-    const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    let url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    if (name) {
+      url += `&name=${encodeURIComponent(name)}`; // only add name if provided
+    }
 
     const response = await fetch(url);
     
@@ -34,7 +39,7 @@ app.get('/api/characters', async (req, res) => {
     }
 
     const json = await response.json();
-    console.log('Characters fetched:', json.data.results.length);
+    
     res.json(json.data.results);
   } catch (err) {
     console.error("ERROR:", err.message);
@@ -48,3 +53,28 @@ app.listen(PORT, () => {
 });
 
 
+
+
+// API route to fetch a Marvel character by ID
+app.get('/api/characters/:id', async (req, res) => {
+  try {
+    const characterId = req.params.id;
+    const ts = new Date().getTime();
+    const hash = md5(ts + privateKey + publicKey);
+
+    const url = `https://gateway.marvel.com/v1/public/characters/${characterId}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      console.error("Marvel API (by ID) responded with:", response.status, response.statusText);
+      return res.status(response.status).json({ error: 'Marvel API request by ID failed' });
+    }
+
+    const json = await response.json();
+    res.json(json); 
+  } catch (err) {
+    console.error("ERROR fetching by ID:", err.message);
+    res.status(500).json({ error: 'Server error while fetching Marvel character by ID' });
+  }
+});

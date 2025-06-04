@@ -49,6 +49,10 @@ GET /api/characters?name=HeroineName
 // Second GET request: Fetch detailed info using character ID
 GET /api/characters/:id
 
+Take the Quiz: Navigates to quiz.html where the user completes a quiz and a GET request determines their Marvel heroine match.
+
+Meet the Heroines: Navigates to heroines.html where GET requests pull heroine data and images from the Marvel API dynamically.
+
 Contributions are welcome!
 To contribute:
 **Fork this repository

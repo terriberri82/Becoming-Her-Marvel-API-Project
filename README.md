@@ -43,14 +43,11 @@ Usage
 
 The site makes two key API calls:
 
-// First GET request: Search by name
-GET /api/characters?name=HeroineName
+### API Endpoints Used
+- `/api/characters?name=CHARACTER_NAME` → Used to search characters by name
+- `/api/characters/:id` → Used to retrieve image and detailed character info
 
-// Second GET request: Fetch detailed info using character ID
-GET /api/characters/:id
-
-Take the Quiz: Navigates to quiz.html where the user completes a quiz and a GET request determines their Marvel heroine match.
-
+Take the Quiz: Navigates to quiz.html where the user completes a quiz and a GET request determines their Marvel heroine match. You also have the option to skip the quiz and navigate to the Meet the Heroines page. 
 Meet the Heroines: Navigates to heroines.html where GET requests pull heroine data and images from the Marvel API dynamically.
 
 Contributions are welcome!

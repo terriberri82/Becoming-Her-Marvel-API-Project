@@ -76,5 +76,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   }
 });
 
+//Skip the quiz to go to Meet the Heroines page
+
+const heroinesLink = document.getElementById('meet-heroines-link');
+if (heroinesLink) {
+  heroinesLink.addEventListener('click', () => {
+    console.log("GET request triggered to fetch Marvel heroines");
+ 
+  });
+}
 
 

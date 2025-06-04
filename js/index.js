@@ -1,22 +1,21 @@
+// INDEX.HTML PAGE
+// Notes: Form for name and enter button needs timer so that it appears after the movie intro plays 
+// When user inputs name and presses enter, page needs to go to quiz page. The user's name then appears on the quiz page.
 
-  // INDEX.HTML PAGE
-  // Notes: Form for name and enter button needs timer so that it appears after the movie intro plays 
-  //When user input name and presses enter page needs to go to quiz page. The user's name the entered
-  //  appears on the quiz page. 
-const video =document.getElementById("intro-video");
-const accessPage = document.querySelector('.access-page')
+const video = document.getElementById("intro-video");
+const accessPage = document.querySelector('.access-page');
 
-video.addEventListener('ended',() =>{
+video.addEventListener('ended', () => {
   accessPage.style.display = 'block';
-  accessPage.style.opacity =0;
+  accessPage.style.opacity = 0;
 
-  setTimeout(() =>{
+  setTimeout(() => {
     accessPage.style.transition = 'opacity 1s ease-in-out';
     accessPage.style.opacity = 1;
-  }, 100)
-})
+  }, 100);
+});
 
-//Music player 
+// Music player 
 document.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('bg-music');
 
@@ -32,9 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('mousemove', playAudioOnce);
   window.addEventListener('click', playAudioOnce);
+
+  
+  document.querySelectorAll('.nav-items a').forEach(link => {
+    link.addEventListener('click', () => {
+      console.log(`Navigating to ${link.getAttribute('href')} and triggering corresponding GET request`);
+    });
+  });
 });
-
-
 
  // User inputs name into form and presses enter. They are routed to the quiz page that show "Welcome______"
 

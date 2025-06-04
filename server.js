@@ -28,7 +28,7 @@ app.get('/api/characters', async (req, res) => {
     const hash = md5(ts + privateKey + publicKey);
     let url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     if (name) {
-      url += `&name=${encodeURIComponent(name)}`; // only add name if provided
+      url += `&name=${encodeURIComponent(name)}`; 
     }
 
     const response = await fetch(url);

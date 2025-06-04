@@ -42,13 +42,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // User inputs name into form and presses enter. They are routed to the quiz page that show "Welcome______"
 
-document.querySelector('form').addEventListener('submit', (e) => {
+document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.querySelector('input[name="text"]').value;
 
   if (name.trim() !== "") {
     localStorage.setItem('userName', name);
-    window.location.href = 'quiz.html'; 
+
+    // Loading card
+    const loadingCard = document.getElementById('loading-card');
+    loadingCard.classList.remove('no-display');
+    loadingCard.classList.add('show-loading');
+
+    const heroines = [
+      "Black Widow", "Gamora", "Jean Grey", "Nebula", "Storm",
+      "Scarlet Witch", "Rogue", "Wasp", "Mystique", "Kate Bishop"
+    ];
+    const randomHeroine = heroines[Math.floor(Math.random() * heroines.length)];
+
+    try {
+      const response = await fetch(`/api/characters?name=${encodeURIComponent(randomHeroine)}`);
+      if (!response.ok) throw new Error(`Failed to fetch data for ${randomHeroine}`);
+      const data = await response.json();
+      console.log(`Fetched data for ${randomHeroine}:`, data);
+
+      setTimeout(() => {
+        window.location.href = 'quiz.html';
+      }, 1500); 
+    } catch (error) {
+      console.error("Error fetching heroine data:", error);
+      loadingCard.textContent = "Oops! Something went wrong. Please try again.";
+    }
   }
 });
 
